@@ -66,5 +66,7 @@ const register = asyncHandler(async (req, res) => {
     user: userPayload,
   });
 });
-
-module.exports = { login, register };
+module.exports = {
+  register,
+  login
+}
