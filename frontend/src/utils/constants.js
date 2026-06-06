@@ -27,7 +27,6 @@ export const LOCAL_STORAGE_KEYS = {
 // - Ensures correct API base URL
 // - Removes trailing slashes issues
 // - Guarantees /api is always included in production
-export const API_BASE_URL = (
+export const API_BASE_URL =
   import.meta.env.VITE_API_URL ||
-  'https://ctms-backend-4wpy.onrender.com/api'
-).replace(/\/$/, '');
+  'https://ctms-backend-4wpy.onrender.com/api';
