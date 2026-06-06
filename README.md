@@ -60,3 +60,77 @@ It supports **role-based access control** for:
 ## 👤 Demo Accounts (For Testing)
 
 ### 🔑 Admin Login
+
+Email: admin@ctms.com
+Password: Password123
+
+
+### 🔑 Manager Login
+
+Email: manager@ctms.com
+Password: Password123
+
+
+### 🔑 Member Login
+
+Email: member@ctms.com
+Password: Password123
+
+
+---
+
+## 📁 Project Structure
+
+
+CTMS
+┣ frontend
+┣ backend
+┣ README.md
+
+
+---
+
+## 🚀 Deployment
+
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
+
+---
+
+## ⚙️ Setup Instructions (Local)
+
+```bash
+# Clone repository
+git clone https://github.com/HARSHILL2023/ticket-raiser-GG-.git
+
+# Backend setup
+cd backend
+npm install
+npm run dev
+
+# Frontend setup
+cd frontend
+npm install
+npm run dev
+📌 API Base URL
+https://ctms-backend-4wpy.onrender.com/api
+📷 UI Preview
+
+Clean modern dashboard with role-based access and real-time complaint tracking.
+
+🧠 Author
+
+Developed with ⚡ by Harshil Patel
+
+⭐ Support
+
+If you like this project, don’t forget to star ⭐ the repository.
+
+
+---
+
+# 🔥 SHORT GITHUB DESCRIPTION
+
+```txt
+Full-stack MERN Complaint Tracking Management System (CTMS) with role-based dashboards, JWT authentication, rea
