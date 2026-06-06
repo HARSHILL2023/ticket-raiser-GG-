@@ -24,18 +24,24 @@ const app = express();
 ────────────────────────────────────────────── */
 app.use(helmet());
 
-// CORS — allow frontend origin
+// CORS — allow frontend origins (dev + production Vercel)
 const allowedOrigins = [
+  // Local development
   'http://localhost:5173',
   'http://localhost:5174',
   'http://localhost:3000',
+  // Vercel production deployment
+  'https://ticket-raiser-cmkuogwn1-harshilpatels-projects-e1a200a3.vercel.app',
 ];
 
 app.use(
   cors({
     origin: (origin, callback) => {
-      // Allow requests with no origin (e.g. Postman, curl)
-      if (!origin || allowedOrigins.includes(origin)) {
+      // Allow requests with no origin (e.g. Postman, mobile apps, curl)
+      if (!origin) return callback(null, true);
+      // Allow any *.vercel.app preview deployment for this project
+      const isVercelPreview = /^https:\/\/ticket-raiser-[\w-]+\.vercel\.app$/.test(origin);
+      if (allowedOrigins.includes(origin) || isVercelPreview) {
         callback(null, true);
       } else {
         callback(new Error(`CORS: Origin ${origin} not allowed.`));
