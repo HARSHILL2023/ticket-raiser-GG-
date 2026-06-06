@@ -3,7 +3,7 @@ import { API_BASE_URL } from '../utils/constants';
 import { getAuthToken, clearAuthSession } from '../utils/localStorage';
 
 const apiClient = axios.create({
-  baseURL: API_BASE_URL,
+  baseURL: 'https://ctms-backend-4wpy.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
